@@ -31,3 +31,5 @@ C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\obj\
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\CountryData.Standard.dll
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\Newtonsoft.Json.dll
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\System.Data.SqlClient.dll
+C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\System.Data.SqlClient.xml

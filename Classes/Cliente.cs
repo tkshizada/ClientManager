@@ -16,7 +16,7 @@ namespace ClientManager.Classes
 
         public string Nome { get; set; }
 
-        public string DataDeNascimento { get; set; }
+        public DateTime DataDeNascimento { get; set; }
 
         public string Idade { get; set; }
 
@@ -45,7 +45,6 @@ namespace ClientManager.Classes
         public string EstadoCivil { get; set; }
 
         public string Nacionalidade { get; set; }
-
     }
 }
     
