@@ -33,6 +33,9 @@ namespace ClientManager.Formulários
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSexo = new System.Windows.Forms.ComboBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNacionalidade = new System.Windows.Forms.ComboBox();
@@ -48,14 +51,13 @@ namespace ClientManager.Formulários
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -69,11 +71,9 @@ namespace ClientManager.Formulários
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtUF = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,9 +107,13 @@ namespace ClientManager.Formulários
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSexo);
+            this.groupBox1.Controls.Add(this.txtCelular);
+            this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNacionalidade);
@@ -125,19 +129,46 @@ namespace ClientManager.Formulários
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.txtSexo);
-            this.groupBox1.Controls.Add(this.txtCelular);
             this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtProfissao);
             this.groupBox1.Controls.Add(this.txtIdade);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Location = new System.Drawing.Point(8, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 263);
+            this.groupBox1.Size = new System.Drawing.Size(797, 183);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Principal";
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSexo.FormattingEnabled = true;
+            this.txtSexo.Items.AddRange(new object[] {
+            "",
+            "Masculino",
+            "Feminino",
+            "Outro"});
+            this.txtSexo.Location = new System.Drawing.Point(327, 105);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(119, 21);
+            this.txtSexo.TabIndex = 64;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(221, 105);
+            this.txtCelular.Mask = "(00) 00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(100, 20);
+            this.txtCelular.TabIndex = 63;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(115, 104);
+            this.txtTelefone.Mask = "(00) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 62;
             // 
             // txtCpf
             // 
@@ -159,8 +190,9 @@ namespace ClientManager.Formulários
             // 
             // txtNacionalidade
             // 
+            this.txtNacionalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtNacionalidade.FormattingEnabled = true;
-            this.txtNacionalidade.Location = new System.Drawing.Point(560, 104);
+            this.txtNacionalidade.Location = new System.Drawing.Point(579, 105);
             this.txtNacionalidade.Name = "txtNacionalidade";
             this.txtNacionalidade.Size = new System.Drawing.Size(212, 21);
             this.txtNacionalidade.TabIndex = 13;
@@ -169,7 +201,7 @@ namespace ClientManager.Formulários
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(560, 83);
+            this.label1.Location = new System.Drawing.Point(576, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 18);
             this.label1.TabIndex = 58;
@@ -177,6 +209,7 @@ namespace ClientManager.Formulários
             // 
             // txtEstadoCivil
             // 
+            this.txtEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtEstadoCivil.FormattingEnabled = true;
             this.txtEstadoCivil.Items.AddRange(new object[] {
             "",
@@ -184,7 +217,7 @@ namespace ClientManager.Formulários
             "Casado(a)",
             "Divorciado(a)",
             "Viúvo"});
-            this.txtEstadoCivil.Location = new System.Drawing.Point(433, 103);
+            this.txtEstadoCivil.Location = new System.Drawing.Point(452, 105);
             this.txtEstadoCivil.Name = "txtEstadoCivil";
             this.txtEstadoCivil.Size = new System.Drawing.Size(121, 21);
             this.txtEstadoCivil.TabIndex = 12;
@@ -197,13 +230,14 @@ namespace ClientManager.Formulários
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(121, 26);
             this.txtDataNascimento.TabIndex = 6;
+            this.txtDataNascimento.ValueChanged += new System.EventHandler(this.txtDataNascimento_ValueChanged);
             this.txtDataNascimento.Leave += new System.EventHandler(this.txtDataNascimento_Leave);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(433, 83);
+            this.label28.Location = new System.Drawing.Point(449, 84);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(86, 18);
             this.label28.TabIndex = 57;
@@ -289,33 +323,13 @@ namespace ClientManager.Formulários
             this.label36.TabIndex = 49;
             this.label36.Text = "ID Cliente";
             // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(327, 104);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(100, 20);
-            this.txtSexo.TabIndex = 11;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(221, 104);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(100, 20);
-            this.txtCelular.TabIndex = 10;
-            // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(9, 47);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(68, 20);
             this.txtID.TabIndex = 3;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(115, 104);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 9;
             // 
             // txtProfissao
             // 
@@ -362,6 +376,23 @@ namespace ClientManager.Formulários
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Endereço";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(298, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 18);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "UF";
+            // 
+            // txtUF
+            // 
+            this.txtUF.Location = new System.Drawing.Point(301, 94);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(100, 20);
+            this.txtUF.TabIndex = 58;
             // 
             // txtCep
             // 
@@ -479,22 +510,23 @@ namespace ClientManager.Formulários
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.btnCancelar);
             this.splitContainer1.Panel2.Controls.Add(this.btnSalvar);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.btnOK);
             this.splitContainer1.Size = new System.Drawing.Size(819, 450);
             this.splitContainer1.SplitterDistance = 402;
             this.splitContainer1.TabIndex = 1;
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(721, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(721, 14);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -507,32 +539,16 @@ namespace ClientManager.Formulários
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button2
+            // btnOK
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(640, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ok";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtUF
-            // 
-            this.txtUF.Location = new System.Drawing.Point(301, 94);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(100, 20);
-            this.txtUF.TabIndex = 58;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(298, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 18);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "UF";
+            this.btnOK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(640, 14);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 1;
+            this.btnOK.Text = "Ok";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // errorProvider1
             // 
@@ -579,9 +595,9 @@ namespace ClientManager.Formulários
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.Label label2;
@@ -598,10 +614,7 @@ namespace ClientManager.Formulários
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txtSexo;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.TextBox txtNome;
@@ -609,5 +622,8 @@ namespace ClientManager.Formulários
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUF;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox txtSexo;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

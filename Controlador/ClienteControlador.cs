@@ -12,7 +12,7 @@ namespace ClientManager.Controlador
 {
     public class ClienteControlador
     {
-        Classes.Cliente cliente = new Classes.Cliente();
+        public Classes.Cliente cliente = new Classes.Cliente();
         private Classes.Conexao conexao = new Classes.Conexao();
         private SqlCommand sqlCommand;
         private string query = "";
@@ -100,7 +100,31 @@ namespace ClientManager.Controlador
             }
         }
 
+        public bool Atualizar()
+        {
+            bool alterou = true;
 
+            query = @"UPDATE CLIENTE SET NOME = '{0}', DATA_NASCIMENTO = '{1}', IDADE = '{2}', CEP = '{3}', RUA = '{4}', BAIRRO = '{5}', NUMERO = '{6}', COMPLEMENTO = '{7}', PROFISSAO = '{8}', CIDADE = '{9}', UF = '{10}', TELEFONE = '{11}', CELULAR = '{12}', SEXO = '{13}', ESTADO_CIVIL = '{14}', NACIONALIDADE = '{15}' WHERE ID = {16} AND CPF = '{17}'";
+
+            sqlCommand = new SqlCommand();
+            query = string.Format(query, cliente.Nome, cliente.DataDeNascimento.ToString("yyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade, cliente.ID, cliente.CPF);
+
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = query;
+
+            sqlCommand.Connection = conexao.sqlConnection;
+
+            if (sqlCommand.ExecuteNonQuery() > 0)
+            {
+                alterou = true;
+            }
+            else
+            {
+                alterou = false;
+            }
+
+            return alterou;
+        }
 
 
 
