@@ -47,6 +47,8 @@ namespace ClientManager.Formulários
 
             txtNacionalidade.DataSource = paises;
 
+
+
             if (edita == true)
             {
                 CarregaCampos();
@@ -70,7 +72,7 @@ namespace ClientManager.Formulários
                         txtID.Text = GetMaxID().ToString();
                         controlador.cliente.ID = Convert.ToInt32(txtID.Text);
 
-                        MessageBox.Show("O cadastro foi salvo!", "Funcionou!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("O cadastro foi salvo!", "Funcionou!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else
@@ -308,6 +310,11 @@ namespace ClientManager.Formulários
             }
 
            
+        }
+
+        private void txtCidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

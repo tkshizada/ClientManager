@@ -14,10 +14,11 @@ namespace ClientManager
 {
     public partial class MenuPrincipal : Form
     {
-
         private DataGridViewRow row = null;
         public bool edita = false;
         public string id = "";
+
+        private string condicaoFiltro = "";
 
         Controlador.ClienteControlador controlador = new Controlador.ClienteControlador();
 
@@ -34,9 +35,17 @@ namespace ClientManager
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            Controlador.ClienteControlador clienteControlador = new Controlador.ClienteControlador();
+            Formulários.frmfiltroCliente frmfiltroCliente = new Formulários.frmfiltroCliente();
+            frmfiltroCliente.ShowDialog();
 
-            clienteControlador.CarregarGrid(dgPrincipal);
+            if (!string.IsNullOrEmpty(frmfiltroCliente.condicao))
+            {
+                condicaoFiltro = frmfiltroCliente.condicao;
+
+                Controlador.ClienteControlador clienteControlador = new Controlador.ClienteControlador();
+
+                clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
+            }
         }
 
 
@@ -57,10 +66,37 @@ namespace ClientManager
 
                     frmCadastroCliente.ShowDialog();
                     Controlador.ClienteControlador clienteControlador = new Controlador.ClienteControlador();
-                    clienteControlador.CarregarGrid(dgPrincipal);
+                    clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
                     break;  
                 default:
                     break;
+            }
+        }
+
+        private void Excluir()
+        {
+            controlador = new Controlador.ClienteControlador();
+
+            if (dgPrincipal.SelectedRows.Count > 0)
+            {
+                row = dgPrincipal.Rows[dgPrincipal.CurrentRow.Index];
+
+                int ID = Convert.ToInt32(row.Cells["ID"].Value);
+
+                string CPF = row.Cells["CPF"].Value.ToString();
+
+                if (controlador.Excluir(ID, CPF))
+                {
+                    MessageBox.Show("Registro excluido com sucesso", "Registro excluido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possivel excluir o registro!", "Registro não excluido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+                }
             }
         }
 
@@ -85,6 +121,28 @@ namespace ClientManager
             if (e.RowIndex % 2 == 0)
                 if (r.DefaultCellStyle.BackColor != Color.White)
                     r.DefaultCellStyle.BackColor = Color.AliceBlue;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Excluir();
+
+            controlador.CarregarGrid(dgPrincipal, condicaoFiltro);
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            Formulários.frmfiltroCliente frmfiltroCliente = new Formulários.frmfiltroCliente();
+            frmfiltroCliente.ShowDialog();
+
+            if (!string.IsNullOrEmpty(frmfiltroCliente.condicao))
+            {
+                condicaoFiltro = frmfiltroCliente.condicao;
+
+                Controlador.ClienteControlador clienteControlador = new Controlador.ClienteControlador();
+
+                clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
+            }
         }
     }
 }

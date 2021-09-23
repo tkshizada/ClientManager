@@ -27,9 +27,9 @@ namespace ClientManager.Controlador
 
         #region Métodos
 
-        public void CarregarGrid(DataGridView dgView)
+        public void CarregarGrid(DataGridView dgView, string condicao)
         {
-            query = "SELECT * FROM " + tabela;
+            query = "SELECT * FROM " + tabela + condicao;
 
             sqlCommand = new SqlCommand(query, conexao.sqlConnection);
 
@@ -126,9 +126,30 @@ namespace ClientManager.Controlador
             return alterou;
         }
 
+        public bool Excluir(int id, string cpf)
+        {
+            bool excluiu = true;
 
+            query = @"DELETE FROM CLIENTE WHERE ID = " + id + " AND CPF = '" + cpf + "'";
 
+            sqlCommand = new SqlCommand();
 
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = query;
+
+            sqlCommand.Connection = conexao.sqlConnection;
+
+            if (sqlCommand.ExecuteNonQuery() > 0)
+            {
+                excluiu = true;
+            }
+            else
+            {
+                excluiu = false;
+            }
+
+            return excluiu;
+        }
         #endregion
     }
 }
