@@ -17,7 +17,7 @@ namespace ClientManager.Classes
 
         public Conexao()
         {
-            connectionString = "Server=(LocalDb)\\MSSQLLocalDB;Database=ClientManager;Trusted_Connection=True;";
+            connectionString = "Server=.;Database=ClientManager;Trusted_Connection=True;";
 
             sqlConnection = new SqlConnection(connectionString);
 

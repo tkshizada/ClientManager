@@ -144,5 +144,10 @@ namespace ClientManager
                 clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
             }
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,13 +35,13 @@ namespace ClientManager.Formulários
             this.labelvalor = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbTodos = new System.Windows.Forms.RadioButton();
+            this.rbIdade = new System.Windows.Forms.RadioButton();
+            this.rbUF = new System.Windows.Forms.RadioButton();
             this.rbNome = new System.Windows.Forms.RadioButton();
             this.rbID = new System.Windows.Forms.RadioButton();
-            this.rbUF = new System.Windows.Forms.RadioButton();
-            this.rbIdade = new System.Windows.Forms.RadioButton();
-            this.btnOK = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.rbTodos = new System.Windows.Forms.RadioButton();
+            this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -111,6 +111,42 @@ namespace ClientManager.Formulários
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opções";
             // 
+            // rbTodos
+            // 
+            this.rbTodos.AutoSize = true;
+            this.rbTodos.Location = new System.Drawing.Point(6, 131);
+            this.rbTodos.Name = "rbTodos";
+            this.rbTodos.Size = new System.Drawing.Size(55, 17);
+            this.rbTodos.TabIndex = 4;
+            this.rbTodos.TabStop = true;
+            this.rbTodos.Text = "Todos";
+            this.rbTodos.UseVisualStyleBackColor = true;
+            this.rbTodos.CheckedChanged += new System.EventHandler(this.rbTodos_CheckedChanged);
+            // 
+            // rbIdade
+            // 
+            this.rbIdade.AutoSize = true;
+            this.rbIdade.Location = new System.Drawing.Point(6, 108);
+            this.rbIdade.Name = "rbIdade";
+            this.rbIdade.Size = new System.Drawing.Size(52, 17);
+            this.rbIdade.TabIndex = 3;
+            this.rbIdade.TabStop = true;
+            this.rbIdade.Text = "Idade";
+            this.rbIdade.UseVisualStyleBackColor = true;
+            this.rbIdade.CheckedChanged += new System.EventHandler(this.rbIdade_CheckedChanged);
+            // 
+            // rbUF
+            // 
+            this.rbUF.AutoSize = true;
+            this.rbUF.Location = new System.Drawing.Point(6, 62);
+            this.rbUF.Name = "rbUF";
+            this.rbUF.Size = new System.Drawing.Size(39, 17);
+            this.rbUF.TabIndex = 2;
+            this.rbUF.TabStop = true;
+            this.rbUF.Text = "UF";
+            this.rbUF.UseVisualStyleBackColor = true;
+            this.rbUF.CheckedChanged += new System.EventHandler(this.rbUF_CheckedChanged);
+            // 
             // rbNome
             // 
             this.rbNome.AutoSize = true;
@@ -133,41 +169,6 @@ namespace ClientManager.Formulários
             this.rbID.UseVisualStyleBackColor = true;
             this.rbID.CheckedChanged += new System.EventHandler(this.rbID_CheckedChanged);
             // 
-            // rbUF
-            // 
-            this.rbUF.AutoSize = true;
-            this.rbUF.Location = new System.Drawing.Point(6, 62);
-            this.rbUF.Name = "rbUF";
-            this.rbUF.Size = new System.Drawing.Size(39, 17);
-            this.rbUF.TabIndex = 2;
-            this.rbUF.TabStop = true;
-            this.rbUF.Text = "UF";
-            this.rbUF.UseVisualStyleBackColor = true;
-            this.rbUF.CheckedChanged += new System.EventHandler(this.rbUF_CheckedChanged);
-            // 
-            // rbIdade
-            // 
-            this.rbIdade.AutoSize = true;
-            this.rbIdade.Location = new System.Drawing.Point(6, 108);
-            this.rbIdade.Name = "rbIdade";
-            this.rbIdade.Size = new System.Drawing.Size(52, 17);
-            this.rbIdade.TabIndex = 3;
-            this.rbIdade.TabStop = true;
-            this.rbIdade.Text = "Idade";
-            this.rbIdade.UseVisualStyleBackColor = true;
-            this.rbIdade.CheckedChanged += new System.EventHandler(this.rbIdade_CheckedChanged);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(212, 9);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "Ok";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,17 +180,16 @@ namespace ClientManager.Formulários
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // rbTodos
+            // btnOK
             // 
-            this.rbTodos.AutoSize = true;
-            this.rbTodos.Location = new System.Drawing.Point(6, 131);
-            this.rbTodos.Name = "rbTodos";
-            this.rbTodos.Size = new System.Drawing.Size(55, 17);
-            this.rbTodos.TabIndex = 4;
-            this.rbTodos.TabStop = true;
-            this.rbTodos.Text = "Todos";
-            this.rbTodos.UseVisualStyleBackColor = true;
-            this.rbTodos.CheckedChanged += new System.EventHandler(this.rbTodos_CheckedChanged);
+            this.btnOK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(212, 9);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "Ok";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // frmfiltroCliente
             // 

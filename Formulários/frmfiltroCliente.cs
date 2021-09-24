@@ -120,5 +120,10 @@ namespace ClientManager.Formulários
                 txtValor.Visible = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

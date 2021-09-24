@@ -70,10 +70,10 @@ namespace ClientManager.Controlador
             {
                 bool adicionou = true;
 
-                query = @"INSERT INTO CLIENTE (CPF, NOME, DATA_NASCIMENTO, IDADE, CEP, RUA, BAIRRO, NUMERO, COMPLEMENTO, PROFISSAO, CIDADE, UF, TELEFONE, CELULAR, SEXO, ESTADO_CIVIL, NACIONALIDADE) VALUES ('{0}', '{1}', {2}, '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}')";
+                query = @"INSERT INTO CLIENTE (CPF, NOME, DATA_NASCIMENTO, IDADE, CEP, RUA, BAIRRO, NUMERO, COMPLEMENTO, PROFISSAO, CIDADE, UF, TELEFONE, CELULAR, SEXO, ESTADO_CIVIL, NACIONALIDADE) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}')";
 
                 sqlCommand = new SqlCommand();
-                query = string.Format(query, cliente.CPF, cliente.Nome, cliente.DataDeNascimento.ToString("yyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade);
+                query = string.Format(query, cliente.CPF, cliente.Nome, cliente.DataDeNascimento.ToString("yyyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade);
 
                 sqlCommand.CommandType = CommandType.Text;
                 sqlCommand.CommandText = query;
@@ -107,7 +107,7 @@ namespace ClientManager.Controlador
             query = @"UPDATE CLIENTE SET NOME = '{0}', DATA_NASCIMENTO = '{1}', IDADE = '{2}', CEP = '{3}', RUA = '{4}', BAIRRO = '{5}', NUMERO = '{6}', COMPLEMENTO = '{7}', PROFISSAO = '{8}', CIDADE = '{9}', UF = '{10}', TELEFONE = '{11}', CELULAR = '{12}', SEXO = '{13}', ESTADO_CIVIL = '{14}', NACIONALIDADE = '{15}' WHERE ID = {16} AND CPF = '{17}'";
 
             sqlCommand = new SqlCommand();
-            query = string.Format(query, cliente.Nome, cliente.DataDeNascimento.ToString("yyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade, cliente.ID, cliente.CPF);
+            query = string.Format(query, cliente.Nome, cliente.DataDeNascimento.ToString("yyyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade, cliente.ID, cliente.CPF);
 
             sqlCommand.CommandType = CommandType.Text;
             sqlCommand.CommandText = query;
