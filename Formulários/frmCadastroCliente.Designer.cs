@@ -76,8 +76,6 @@ namespace ClientManager.Formulários
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,8 +120,6 @@ namespace ClientManager.Formulários
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnEntrar);
-            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -562,27 +558,6 @@ namespace ClientManager.Formulários
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnEntrar.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEntrar.Location = new System.Drawing.Point(179, 219);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(420, 75);
-            this.btnEntrar.TabIndex = 1;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(206, 301);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(375, 50);
-            this.panel2.TabIndex = 7;
-            this.panel2.Visible = false;
-            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,7 +631,5 @@ namespace ClientManager.Formulários
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Panel panel2;
     }
 }
