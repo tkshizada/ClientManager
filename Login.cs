@@ -36,7 +36,11 @@ namespace ClientManager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
 
+            menuPrincipal.ShowDialog();
+
+   
         }
 
         private void pbSenha_Click(object sender, EventArgs e)
@@ -45,13 +49,13 @@ namespace ClientManager
             {
                 selecionou = true;
                 pbSenha.Image = Properties.Resources.Aberto;
-                textBox1.PasswordChar = '\0';
+                txtPassword.PasswordChar = '\0';
             }
             else
             {
                 selecionou = false;
                 pbSenha.Image = Properties.Resources.Fechado;
-                textBox1.PasswordChar = '*';
+                txtPassword.PasswordChar = '*';
             }
         }
 
@@ -68,6 +72,16 @@ namespace ClientManager
         private void pbSenha_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

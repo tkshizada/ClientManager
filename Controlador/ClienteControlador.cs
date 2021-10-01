@@ -70,10 +70,10 @@ namespace ClientManager.Controlador
             {
                 bool adicionou = true;
 
-                query = @"INSERT INTO CLIENTE (CPF, NOME, DATA_NASCIMENTO, IDADE, CEP, RUA, BAIRRO, NUMERO, COMPLEMENTO, PROFISSAO, CIDADE, UF, TELEFONE, CELULAR, SEXO, ESTADO_CIVIL, NACIONALIDADE) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}')";
+                query = @"INSERT INTO CLIENTE (ID, CPF, NOME, DATA_NASCIMENTO, IDADE, CEP, RUA, BAIRRO, NUMERO, COMPLEMENTO, PROFISSAO, CIDADE, UF, TELEFONE, CELULAR, SEXO, ESTADO_CIVIL, NACIONALIDADE) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}')";
 
                 sqlCommand = new SqlCommand();
-                query = string.Format(query, cliente.CPF, cliente.Nome, cliente.DataDeNascimento.ToString("yyyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade);
+                query = string.Format(query,cliente.ID, cliente.CPF, cliente.Nome, cliente.DataDeNascimento.ToString("yyyy-MM-dd"), cliente.Idade, cliente.CEP, cliente.Rua, cliente.Bairro, cliente.Numero, cliente.Complemento, cliente.Profissao, cliente.Cidade, cliente.UF, cliente.Telefone, cliente.Celular, cliente.Sexo, cliente.EstadoCivil, cliente.Nacionalidade);
 
                 sqlCommand.CommandType = CommandType.Text;
                 sqlCommand.CommandText = query;

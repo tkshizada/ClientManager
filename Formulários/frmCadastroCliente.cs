@@ -54,7 +54,14 @@ namespace ClientManager.Formulários
                 CarregaCampos();
             }
 
-
+            if (checkBox2.Checked)
+            {
+                txtTelefone.Enabled = true;
+            }
+            else
+            {
+                txtTelefone.Enabled = false;
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -279,7 +286,7 @@ namespace ClientManager.Formulários
             {
                 if (edita == false)
                 {
-                    controlador.IntegrarPropriedades(0, txtCpf.Text, txtNome.Text, Convert.ToDateTime(txtDataNascimento.Text), txtIdade.Text, txtCep.Text, txtRua.Text, txtBairro.Text, txtNumero.Text, txtComplemento.Text, txtProfissao.Text, txtCidade.Text, txtUF.Text, txtTelefone.Text, txtCelular.Text, txtSexo.Text, txtEstadoCivil.Text, txtNacionalidade.Text);
+                    controlador.IntegrarPropriedades(Convert.ToInt32(txtID.Text), txtCpf.Text, txtNome.Text, Convert.ToDateTime(txtDataNascimento.Text), txtIdade.Text, txtCep.Text, txtRua.Text, txtBairro.Text, txtNumero.Text, txtComplemento.Text, txtProfissao.Text, txtCidade.Text, txtUF.Text, txtTelefone.Text, txtCelular.Text, txtSexo.Text, txtEstadoCivil.Text, txtNacionalidade.Text);
 
                     if (controlador.Adicionar())
                     {
@@ -313,6 +320,46 @@ namespace ClientManager.Formulários
         }
 
         private void txtCidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                txtTelefone.Enabled = true;
+            }
+            else
+            {
+                txtTelefone.Enabled = false;
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            pbFoto.Image = null;    
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
+       + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pbFoto.ImageLocation = openFileDialog.FileName;
+            }
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
         {
 
         }

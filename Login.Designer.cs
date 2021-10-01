@@ -30,9 +30,9 @@ namespace ClientManager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.sair = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,32 +44,34 @@ namespace ClientManager
             ((System.ComponentModel.ISupportInitialize)(this.pbSenha)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(138, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtPassword.Location = new System.Drawing.Point(59, 197);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(138, 26);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // textBox2
+            // txtUser
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 26);
-            this.textBox2.TabIndex = 1;
+            this.txtUser.Location = new System.Drawing.Point(59, 150);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(174, 26);
+            this.txtUser.TabIndex = 0;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
-            // label1
+            // sair
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 302);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 18);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Sair";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.sair.AutoSize = true;
+            this.sair.Location = new System.Drawing.Point(117, 302);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(31, 18);
+            this.sair.TabIndex = 3;
+            this.sair.Text = "Sair";
+            this.sair.Click += new System.EventHandler(this.label1_Click);
+            this.sair.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.sair.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // button1
             // 
@@ -80,7 +82,7 @@ namespace ClientManager
             this.button1.Location = new System.Drawing.Point(81, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 29);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Entrar\r\n";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -137,12 +139,12 @@ namespace ClientManager
             this.ClientSize = new System.Drawing.Size(276, 359);
             this.Controls.Add(this.pbSenha);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sair);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtPassword);
             this.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -164,12 +166,12 @@ namespace ClientManager
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sair;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pbSenha;
     }

@@ -89,6 +89,7 @@ namespace ClientManager.Formulários
             this.labelvalor.Size = new System.Drawing.Size(31, 13);
             this.labelvalor.TabIndex = 1;
             this.labelvalor.Text = "Valor";
+            this.labelvalor.Click += new System.EventHandler(this.labelvalor_Click);
             // 
             // txtValor
             // 

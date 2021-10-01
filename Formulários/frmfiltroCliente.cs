@@ -125,5 +125,10 @@ namespace ClientManager.Formulários
         {
 
         }
+
+        private void labelvalor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
