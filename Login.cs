@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,14 @@ namespace ClientManager
 {
     public partial class Login : Form
     {
+        public Classes.Cliente cliente = new Classes.Cliente();
+        private Classes.Conexao conexao = new Classes.Conexao();
+        private SqlCommand sqlCommand;
+        private DataTable dt;
+        private string tabela = "LOGIN";
+        private string query = "";
+
+
         bool selecionou;
 
         public Login()
@@ -36,11 +45,21 @@ namespace ClientManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            Classes.Login login = new Classes.Login();          
 
-            menuPrincipal.ShowDialog();
+            string usuario = login.ObterUsuario(txtUser.Text);
+            string senha = login.ObterSenha(txtUser.Text);
 
-   
+            if (login.ValidarLogin(usuario, txtUser.Text, senha, txtPassword.Text))
+            {
+                MenuPrincipal menuPrincipal = new MenuPrincipal();
+
+                menuPrincipal.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuario e/ou Senha incorretor");
+            }          
         }
 
         private void pbSenha_Click(object sender, EventArgs e)

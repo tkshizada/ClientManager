@@ -62,28 +62,28 @@ namespace ClientManager.Formulários
             this.label33 = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtNacionalidade = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.ComboBox();
-            this.txtUF = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUF = new System.Windows.Forms.ComboBox();
+            this.txtNacionalidade = new System.Windows.Forms.ComboBox();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.txtRua = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,9 +94,9 @@ namespace ClientManager.Formulários
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -447,79 +447,41 @@ namespace ClientManager.Formulários
             this.tabPage2.Text = "Endereço";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtNacionalidade
+            // groupBox3
             // 
-            this.txtNacionalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtNacionalidade.FormattingEnabled = true;
-            this.txtNacionalidade.Location = new System.Drawing.Point(9, 162);
-            this.txtNacionalidade.Name = "txtNacionalidade";
-            this.txtNacionalidade.Size = new System.Drawing.Size(212, 21);
-            this.txtNacionalidade.TabIndex = 62;
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtCidade);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.txtUF);
+            this.groupBox3.Controls.Add(this.txtNacionalidade);
+            this.groupBox3.Controls.Add(this.txtCep);
+            this.groupBox3.Controls.Add(this.txtBairro);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.txtRua);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label27);
+            this.groupBox3.Controls.Add(this.txtComplemento);
+            this.groupBox3.Controls.Add(this.txtNumero);
+            this.groupBox3.Location = new System.Drawing.Point(8, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(604, 199);
+            this.groupBox3.TabIndex = 65;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 18);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "Nacionalidade";
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.FormattingEnabled = true;
-            this.txtCidade.Location = new System.Drawing.Point(354, 162);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(141, 21);
-            this.txtCidade.TabIndex = 61;
-            this.txtCidade.SelectedIndexChanged += new System.EventHandler(this.txtCidade_SelectedIndexChanged);
-            // 
-            // txtUF
-            // 
-            this.txtUF.FormattingEnabled = true;
-            this.txtUF.Location = new System.Drawing.Point(227, 162);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(121, 21);
-            this.txtUF.TabIndex = 60;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(224, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 18);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "UF";
-            // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(9, 39);
-            this.txtCep.Mask = "00000-000";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(80, 20);
-            this.txtCep.TabIndex = 0;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(6, 74);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(35, 18);
-            this.label27.TabIndex = 55;
-            this.label27.Text = "Rua";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(120, 18);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 18);
-            this.label23.TabIndex = 51;
-            this.label23.Text = "Bairro";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(95, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
             // 
             // label16
             // 
@@ -531,16 +493,6 @@ namespace ClientManager.Formulários
             this.label16.TabIndex = 44;
             this.label16.Text = "CEP";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(381, 74);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 18);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "Numero";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -550,6 +502,94 @@ namespace ClientManager.Formulários
             this.label12.Size = new System.Drawing.Size(54, 18);
             this.label12.TabIndex = 40;
             this.label12.Text = "Cidade";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.FormattingEnabled = true;
+            this.txtCidade.Location = new System.Drawing.Point(354, 162);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(141, 21);
+            this.txtCidade.TabIndex = 61;
+            this.txtCidade.SelectedIndexChanged += new System.EventHandler(this.txtCidade_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 18);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Nacionalidade";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(224, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 18);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "UF";
+            // 
+            // txtUF
+            // 
+            this.txtUF.FormattingEnabled = true;
+            this.txtUF.Location = new System.Drawing.Point(227, 162);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(121, 21);
+            this.txtUF.TabIndex = 60;
+            // 
+            // txtNacionalidade
+            // 
+            this.txtNacionalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtNacionalidade.FormattingEnabled = true;
+            this.txtNacionalidade.Location = new System.Drawing.Point(9, 162);
+            this.txtNacionalidade.Name = "txtNacionalidade";
+            this.txtNacionalidade.Size = new System.Drawing.Size(212, 21);
+            this.txtNacionalidade.TabIndex = 62;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(9, 39);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(80, 20);
+            this.txtCep.TabIndex = 0;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(123, 39);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(218, 20);
+            this.txtBairro.TabIndex = 2;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(120, 18);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(48, 18);
+            this.label23.TabIndex = 51;
+            this.label23.Text = "Bairro";
+            // 
+            // txtRua
+            // 
+            this.txtRua.Location = new System.Drawing.Point(9, 95);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(369, 20);
+            this.txtRua.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(381, 74);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(62, 18);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "Numero";
             // 
             // label6
             // 
@@ -561,19 +601,22 @@ namespace ClientManager.Formulários
             this.label6.TabIndex = 34;
             this.label6.Text = "Complemento";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(6, 74);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(35, 18);
+            this.label27.TabIndex = 55;
+            this.label27.Text = "Rua";
+            // 
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(463, 95);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(136, 20);
             this.txtComplemento.TabIndex = 5;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Location = new System.Drawing.Point(123, 39);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(218, 20);
-            this.txtBairro.TabIndex = 2;
             // 
             // txtNumero
             // 
@@ -582,13 +625,6 @@ namespace ClientManager.Formulários
             this.txtNumero.Size = new System.Drawing.Size(73, 20);
             this.txtNumero.TabIndex = 3;
             this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
-            // 
-            // txtRua
-            // 
-            this.txtRua.Location = new System.Drawing.Point(9, 95);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(369, 20);
-            this.txtRua.TabIndex = 1;
             // 
             // btnCancelar
             // 
@@ -627,42 +663,6 @@ namespace ClientManager.Formulários
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtCidade);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txtUF);
-            this.groupBox3.Controls.Add(this.txtNacionalidade);
-            this.groupBox3.Controls.Add(this.txtCep);
-            this.groupBox3.Controls.Add(this.txtBairro);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.txtRua);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.txtComplemento);
-            this.groupBox3.Controls.Add(this.txtNumero);
-            this.groupBox3.Location = new System.Drawing.Point(8, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(604, 199);
-            this.groupBox3.TabIndex = 65;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(95, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 64;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,10 +687,10 @@ namespace ClientManager.Formulários
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Classes\Login.cs" />
     <Compile Include="Controlador\ClienteControlador.cs" />
     <Compile Include="Formulários\frmCadastroCliente.cs">
       <SubType>Form</SubType>
