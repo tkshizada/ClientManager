@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClientManager.Classes
 {
-    public class Cliente
+    public class Vendedor
     {
-        public Cliente()
+
+        public Vendedor()
         { }
 
-        public int ID { get; set; }
+        public string RG { get; set; }
+
+        public string COD_EMPRESA { get; set; }
 
         public string CPF { get; set; }
 
@@ -31,26 +34,13 @@ namespace ClientManager.Classes
 
         public string Complemento { get; set; }
 
-        public string Profissao { get; set; }
-
         public string Cidade { get; set; }
-
-        public string UF { get; set; }
-
-        public string Telefone { get; set; }
 
         public string Celular { get; set; }
 
         public string Sexo { get; set; }
 
-        public string EstadoCivil { get; set; }
+        public string Estado { get; set; }
 
-        public string Nacionalidade { get; set; }
     }
 }
-    
-      
-
-         
-    
-

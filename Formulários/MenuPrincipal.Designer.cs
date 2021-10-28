@@ -44,6 +44,8 @@ namespace ClientManager
             this.btnFiltrar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCliente = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPrincipal)).BeginInit();
@@ -79,6 +81,7 @@ namespace ClientManager
             // 
             this.dgPrincipal.AllowUserToAddRows = false;
             this.dgPrincipal.AllowUserToDeleteRows = false;
+            this.dgPrincipal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgPrincipal.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -89,7 +92,9 @@ namespace ClientManager
             this.dgPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPrincipal.Size = new System.Drawing.Size(791, 299);
             this.dgPrincipal.TabIndex = 3;
+            this.dgPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPrincipal_CellContentClick);
             this.dgPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgPrincipal_CellFormatting);
+            this.dgPrincipal.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgPrincipal_Scroll);
             this.dgPrincipal.DoubleClick += new System.EventHandler(this.dgPrincipal_DoubleClick);
             // 
             // panel1
@@ -176,7 +181,9 @@ namespace ClientManager
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCliente});
+            this.btnCliente,
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(791, 37);
@@ -190,6 +197,25 @@ namespace ClientManager
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(78, 34);
             this.btnCliente.Text = "Cliente";
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(91, 34);
+            this.toolStripButton1.Text = "Vendedor";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(86, 34);
+            this.toolStripButton2.Text = "Empresa";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // MenuPrincipal
             // 
@@ -231,6 +257,8 @@ namespace ClientManager
         private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnFiltrar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 

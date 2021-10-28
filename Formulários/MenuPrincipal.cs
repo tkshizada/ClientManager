@@ -20,6 +20,7 @@ namespace ClientManager
 
         private string condicaoFiltro = "";
 
+        Classes.Utilidades util = new Classes.Utilidades();
         Controlador.ClienteControlador controlador = new Controlador.ClienteControlador();
 
         public MenuPrincipal()
@@ -63,11 +64,28 @@ namespace ClientManager
                         frmCadastroCliente.id = row.Cells["ID"].Value.ToString();
                         frmCadastroCliente.cpf = row.Cells["CPF"].Value.ToString();
                     }
-
+                    
                     frmCadastroCliente.ShowDialog();
                     Controlador.ClienteControlador clienteControlador = new Controlador.ClienteControlador();
                     clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
-                    break;  
+                    break;
+
+                case "EMPRESA":
+                    Formulários.frmCadastroEmpresa frmCadastroEmpresa = new Formulários.frmCadastroEmpresa();
+
+                    if (edicao == true)
+                    {
+                        row = dgPrincipal.Rows[dgPrincipal.CurrentRow.Index];
+                        frmCadastroEmpresa.edita = true;
+                        frmCadastroEmpresa.cnpj = row.Cells["CNPJ"].Value.ToString();
+                        frmCadastroEmpresa.codEmpresa = row.Cells["COD_EMPRESA"].Value.ToString();
+
+                    }
+
+                    frmCadastroEmpresa.ShowDialog();
+                    Controlador.EmpresaControlador empresaControlador = new Controlador.EmpresaControlador();
+                    empresaControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
+                    break;
                 default:
                     break;
             }
@@ -143,11 +161,42 @@ namespace ClientManager
 
                 clienteControlador.CarregarGrid(dgPrincipal, condicaoFiltro);
             }
-        }
+        }     
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            util.botaoSelecionado = toolStripButton1.Text;
+
+            util.CarregarGridDinamica(dgPrincipal);
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            util.botaoSelecionado = btnCliente.Text;
+
+            util.CarregarGridDinamica(dgPrincipal);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            util.botaoSelecionado = toolStripButton2.Text;
+
+            util.CarregarGridDinamica(dgPrincipal);
+        }
+
+        private void dgPrincipal_Scroll(object sender, ScrollEventArgs e)
+        {
+            
+        }
+
+        private void dgPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+ 
         }
     }
 }

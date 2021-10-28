@@ -97,13 +97,30 @@
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Classes\Empresa.cs" />
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Utilidades.cs" />
+    <Compile Include="Classes\Vendedor.cs" />
     <Compile Include="Controlador\ClienteControlador.cs" />
+    <Compile Include="Controlador\EmpresaControlador.cs" />
+    <Compile Include="Controlador\VendedorControlador.cs" />
     <Compile Include="Formulários\frmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulários\frmCadastroCliente.Designer.cs">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroEmpresa.Designer.cs">
+      <DependentUpon>frmCadastroEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadastroVendedor.Designer.cs">
+      <DependentUpon>frmCadastroVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\frmfiltroCliente.cs">
       <SubType>Form</SubType>
@@ -127,6 +144,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmCadastroEmpresa.resx">
+      <DependentUpon>frmCadastroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmCadastroVendedor.resx">
+      <DependentUpon>frmCadastroVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmfiltroCliente.resx">
       <DependentUpon>frmfiltroCliente.cs</DependentUpon>

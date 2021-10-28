@@ -55,7 +55,7 @@ namespace ClientManager
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(59, 150);
+            this.txtUser.Location = new System.Drawing.Point(58, 150);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(174, 26);
             this.txtUser.TabIndex = 0;

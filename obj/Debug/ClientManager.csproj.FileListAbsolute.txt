@@ -35,3 +35,5 @@ C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\bin\Debug\System.Data.SqlClient.xml
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\obj\Debug\ClientManager.Formulários.frmfiltroCliente.resources
 C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\obj\Debug\ClientManager.Login.resources
+C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\obj\Debug\ClientManager.Formulários.frmCadastroEmpresa.resources
+C:\Users\mathe\OneDrive\Documentos\ProjetoVS\ClientManagerApp\ClientManager\obj\Debug\ClientManager.Formulários.frmCadastroVendedor.resources

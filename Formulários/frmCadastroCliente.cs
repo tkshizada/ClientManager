@@ -260,7 +260,7 @@ namespace ClientManager.Formulários
 
         private void txtDataNascimento_Leave(object sender, EventArgs e)
         {
-            txtIdade.Text = CalculoIdade(   );
+            txtIdade.Text = CalculoIdade();
 
         }
 
@@ -360,6 +360,11 @@ namespace ClientManager.Formulários
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFoto_Click(object sender, EventArgs e)
         {
 
         }

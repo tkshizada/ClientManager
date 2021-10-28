@@ -50,16 +50,25 @@ namespace ClientManager
             string usuario = login.ObterUsuario(txtUser.Text);
             string senha = login.ObterSenha(txtUser.Text);
 
+            if(ValidarLogin(txtUser.Text, txtPassword.Text) == false)
+            {
+                return;
+            }
+
+
             if (login.ValidarLogin(usuario, txtUser.Text, senha, txtPassword.Text))
             {
+
                 MenuPrincipal menuPrincipal = new MenuPrincipal();
 
                 menuPrincipal.ShowDialog();
+
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Usuario e/ou Senha incorretor");
-            }          
+            }
         }
 
         private void pbSenha_Click(object sender, EventArgs e)
@@ -102,5 +111,32 @@ namespace ClientManager
         {
 
         }
+
+        #region Métodos
+
+        private bool ValidarLogin(string usuario, string senha)
+        {
+            if (usuario == "" && senha == "")
+            {
+                MessageBox.Show("Digite Usuário e Senha!");
+                return false;
+            }
+            else if (usuario == "")
+            {
+                MessageBox.Show("Digite o Usuário!");
+                return false;
+            }
+            else if (senha == "")
+            {
+                MessageBox.Show("Digite a Senha");
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
+        }
+     
+        #endregion
     }
 }
