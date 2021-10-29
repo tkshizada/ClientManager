@@ -67,7 +67,7 @@ namespace ClientManager
             }
             else
             {
-                MessageBox.Show("Usuario e/ou Senha incorretor");
+                MessageBox.Show("Usuario e/ou Senha incorretos");
             }
         }
 

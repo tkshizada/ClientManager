@@ -12,6 +12,12 @@ namespace ClientManager.Formulários
 {
     public partial class frmCadastroVendedor : Form
     {
+
+        public bool edita;
+        public string rg = "";
+        public string codEmpresa = "";
+
+
         public frmCadastroVendedor()
         {
             InitializeComponent();
@@ -55,5 +61,69 @@ namespace ClientManager.Formulários
                 pbFoto.ImageLocation = openFileDialog.FileName;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        //private bool ValidarCampos()
+        //{
+        //    if (txtRG.Text == "")
+        //    {
+        //        MessageBox.Show("Informar RG!");
+        //        return false;
+        //    }
+
+        //    if (txt)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+
+        //    if (true)
+        //    {
+
+        //    }
+        //}
     }
 }

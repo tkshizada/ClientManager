@@ -23,6 +23,7 @@ namespace ClientManager.Formulários
         private Classes.Conexao conexao = new Classes.Conexao();
 
 
+
         public frmCadastroEmpresa()
         {
             InitializeComponent();

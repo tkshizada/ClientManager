@@ -120,32 +120,41 @@ namespace ClientManager
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            ChamarFormulario("CLIENTE", false);
+            util.ChamarFormularioBotao(false, row);
+            util.CarregarGridDinamica(dgPrincipal);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            ChamarFormulario("CLIENTE", true);
+            //ChamarFormulario("CLIENTE", true);
+            util.ChamarFormularioBotao(true, row = dgPrincipal.CurrentRow);
         }
 
         private void dgPrincipal_DoubleClick(object sender, EventArgs e)
         {
-            ChamarFormulario("CLIENTE", true);
+            util.ChamarFormularioBotao(true, row = dgPrincipal.CurrentRow);
         }
 
         private void dgPrincipal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             DataGridViewRow r = dgPrincipal.Rows[e.RowIndex];
+            Color col = System.Drawing.ColorTranslator.FromHtml("#FFCC66");
             if (e.RowIndex % 2 == 0)
-                if (r.DefaultCellStyle.BackColor != Color.White)
-                    r.DefaultCellStyle.BackColor = Color.AliceBlue;
+            {
+                r.DefaultCellStyle.BackColor = Color.White;
+            }
+            else
+            {
+                r.DefaultCellStyle.BackColor = col;g
+            }
+                    
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             Excluir();
 
-            controlador.CarregarGrid(dgPrincipal, condicaoFiltro);
+            util.CarregarGridDinamica(dgPrincipal);
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
